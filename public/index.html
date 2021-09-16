@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>BRAND</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    </head>
+
+<body>
+    <div id="app" class="container_top">
+        <div class="top">
+            <header class="header">
+                <div class="container header-flex">
+                    <div class="header-left">
+                        <a class="logo" href="index.html"><img class="logo-img" src="img/logo.png" alt="logo">BRAN<span class="logo-d">D</span></a>
+                        <form class="form" action="#">
+                            <div class="btn-group" role="group">
+                                <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="browse-b">B</span>rowse
+                                </button>
+                                <drop-down-menu></drop-down-menu>
+                            </div>
+                            <input class="input-search" type="text" placeholder="Search for Item...">
+                            <button id="search-button" type="submit"><i class="fas fa-search"></i></button>
+                        </form>
+                    </div>
+                    <div class="header-right">
+                        <cart ref="cart"></cart>
+                        <account-button></account-button>
+                    </div>
+                </div>
+            </header>
+            <nav class="navigation">
+                <div class="container">    
+                        <upper-menu></upper-menu>
+                </div>
+            </nav>
+            <div class="promo">
+                <div class="container promo-content">
+                    <div class="promo-text">
+                        <h3 class="promo-h3">THE BRAND</h3>
+                        <p class="promo-p">OF LUXERIOUS <span class="pink">FASHION</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="offers">
+                <div class="container">
+                    <div class="column">
+                        <div class="offer">
+                            <div class="relative">
+                                <a href="single-page.html"><img class="offer-img" src="img/hot-deal.png" alt="hot deal"></a>
+                            </div>
+                            <div class="absolute">
+                                <h4 class="absolute-h4">HOT DEAL</h4>
+                                <h3 class="absolute-h3">FOR MEN</h3>
+                            </div>
+                        </div>
+                        <div class="offer">
+                            <div class="relative">
+                                <a href="single-page.html"><img class="offer-img" src="img/accessories.png" alt="accessories"></a>
+                            </div>
+                            <div class="absolute second">
+                                <h4 class="absolute-h4">LUXIROUS &amp; TRENDY</h4>
+                                <h3 class="absolute-h3">ACCESORIES</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="offer">
+                            <div class="relative">
+                                <a href="single-page.html"><img class="offer-img" src="img/discount-offer.png" alt="discount offer"></a>
+                            </div>
+                            <div class="absolute">
+                                <h4 class="absolute-h4">30% offer</h4>
+                                <h3 class="absolute-h3">women</h3>
+                            </div>
+                        </div>
+                        <div class="offer">
+                            <div class="relative">
+                                <a href="single-page.html"><img class="offer-img" src="img/new-arrivals.png" alt="new arrivals"></a>
+                            </div>
+                            <div class="absolute forth">
+                                <h4 class="absolute-h4">new arrivals</h4>
+                                <h3 class="absolute-h3">FOR kids</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <section class="featured-items">
+                <div class="container">
+                    <h3>Featured Items</h3>
+                    <p>Shop for items based on what we featured in this week</p>
+                </div>
+                <div class="product-box">        
+                    <products :featured="true" ref="products"></products>
+                    <error ref="error"></error>
+                </div>
+            </section>
+            <div class="browse">
+                <div class="container">
+                    <a href="product.html"><button class="button arrow">&nbsp;&nbsp;&nbsp;Browse All Products &nbsp;&nbsp;<i class="fas fa-arrow-right"></i>&nbsp;</button></a>
+                </div>
+            </div>
+            <div class="special-offer">
+                <div class="container">
+                    <div>
+                        <div class="special-offer-img">
+                            <img src="img/special-offer.png" alt="special offer">
+                        </div>
+                    </div>
+                    <div>
+                        <article class="special-offer-para mouseScrollZoom"> 
+                            <!--  При прокрутке колёсика мыши над этим элементом, он будет масштабироваться. -->
+                            <div><img src="img/icon-truck.svg" alt="icon"></div>
+                            <div class="special-offer-flex">
+                                <div>
+                                    <h4 class="special-offer-para-h4">Free Delivery</h4>
+                                </div>
+                                <div>
+                                    <p class="special-offer-para-p">Worldwide delivery on all. Authoritatively morph next-generation innovation with extensive models.</p>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="special-offer-para mouseScrollZoom">
+                            <!--  При прокрутке колёсика мыши над этим элементом, он будет масштабироваться. -->
+                            <div><img src="img/icon-discount.svg" alt="icon"></div>
+                            <div class="special-offer-flex">
+                                <div>
+                                    <h4 class="special-offer-para-h4">Sales &amp; discounts</h4>
+                                </div>
+                                <div>
+                                    <p class="special-offer-para-p">Worldwide delivery on all. Authoritatively morph next-generation innovation with extensive models.</p>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="special-offer-para mouseScrollZoom">
+                            <!--  При прокрутке колёсика мыши над этим элементом, он будет масштабироваться. -->
+                            <div><img src="img/icon-discount.svg" alt="icon"></div>
+                            <div class="special-offer-flex">
+                                <div>
+                                    <h4 class="special-offer-para-h4">Quality assurance</h4>
+                                </div>
+                                <div>
+                                    <p class="special-offer-para-p">Worldwide delivery on all. Authoritatively morph next-generation innovation with extensive models.</p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer-elem></footer-elem>
+    </div>
+
+<script src="js/zoomOnScroll.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="js/dropoutComp.js"></script>
+<script src="js/dropdownMenu.js"></script>
+<script src="js/footerComp.js"></script>
+<script src="js/productsComp.js"></script>
+<script src="js/errorComp.js"></script>
+<script src="js/cartComp.js"></script>
+<script src="js/main.js"></script>
+
+    <!-- пока страница грузится, пользователь видит черный экран и крутящийся квадратик --> 
+    <div class="loader-wrapper">
+        <span class="loader"><span class="loader-inner"></span></span>
+    </div>
+    
+    <script>
+        $(window).on("load",function(){
+          $(".loader-wrapper").fadeOut("slow");
+        });
+    </script> 
+   
+</body>
+
+</html>

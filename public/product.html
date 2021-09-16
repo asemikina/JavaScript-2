@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>BRAND</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+</head>
+
+<body>
+    <div id="app" class="container_top">
+        <div class="top">
+            <header class="header">
+                <div class="container header-flex">
+                    <div class="header-left">
+                        <a class="logo" href="index.html"><img class="logo-img" src="img/logo.png" alt="logo">BRAN<span
+                                class="logo-d">D</span></a>
+                        <form class="form" action="#">
+                            <div class="btn-group" role="group">
+                                <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="browse-b">B</span>rowse
+                                </button>
+                                <drop-down-menu></drop-down-menu>
+                            </div>
+                            <input class="input-search" type="text" placeholder="Search for Item...">
+                            <button id="search-button" type="submit"><i class="fas fa-search"></i></button>
+                        </form>
+                    </div>
+                    <div class="header-right">
+                        <cart ref="cart"></cart>
+                        <account-button></account-button>
+                    </div>
+                </div>
+            </header>
+            <nav class="navigation">
+                <div class="container">
+                    <upper-menu></upper-menu>
+                </div>
+            </nav>
+            <nav class="new-arrivals">
+                <div class="container">
+                    <h3 class="new-arrivals-h">New Arrivals</h3>
+                    <div>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a class="breadcrumb-item-a" href="index.html">Home</a></li>
+                                <li class="breadcrumb-item"><a class="breadcrumb-item-a" href="product.html">Men</a>
+                                </li>
+                                <li class="breadcrumb-item active" aria-current="page">New Arrivals</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </nav>
+            <div class="container products">  
+                <aside-menu></aside-menu>
+                <section class="products-header">
+                    <div class="products-header-flex">
+                        <div class="products-header-column-3">
+                            <h3 class="products-section-h3">Trending now </h3>
+                            <a href="#" class="trending-now">Bohemian</a>
+                            <span class="decoration-slash">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                            <a href="#" class="trending-now">Floral</a><span
+                                class="decoration-slash">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                            <a href="#" class="trending-now">Lace</a>
+                            <br>
+                            <a href="#" class="trending-now">Floral</a><span
+                                class="decoration-slash">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                            <a href="#" class="trending-now">Lace</a><span
+                                class="decoration-slash">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                            <a href="#" class="trending-now">Bohemian</a>
+                        </div>
+                        <div class="products-header-column-3">
+                            <h3 class="products-section-h3">Size</h3>
+                            <form action="#" method="get">
+                                <div class="form-flex row-1">
+                                    <label class="checkbox-label"><input class="checkbox-size" type="checkbox"
+                                            name="size" value="XXS"><span class="checkmark"></span><span
+                                            class="size-value">XXS</span></label>
+                                    <label class="checkbox-label"><input class="checkbox-size" type="checkbox"
+                                            name="size" value="XS"><span class="checkmark"></span><span
+                                            class="size-value">XS</span></label>
+                                    <label class="checkbox-label"><input class="checkbox-size" type="checkbox"
+                                            name="size" value="S"><span class="checkmark"></span><span
+                                            class="size-value">S</span></label>
+                                    <label class="checkbox-label"><input class="checkbox-size" type="checkbox"
+                                            name="size" value="M"><span class="checkmark"></span><span
+                                            class="size-value">M</span></label>
+                                </div>
+                                <div class="form-flex row-2">
+                                    <label class="checkbox-label"><input class="checkbox-size" type="checkbox"
+                                            name="size" value="L"><span class="checkmark"></span><span
+                                            class="size-value">L</span></label>
+                                    <label class="checkbox-label"><input class="checkbox-size" type="checkbox"
+                                            name="size" value="XL"><span class="checkmark"></span><span
+                                            class="size-value">XL</span></label>
+                                    <label class="checkbox-label"><input class="checkbox-size" type="checkbox"
+                                            name="size" value="XXL"><span class="checkmark"></span><span
+                                            class="size-value">XXL</span></label>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="products-header-column-3">
+                            <h3 class="products-section-h3">pRICE</h3>
+                            <input type="range" min="0" max="1000" value="400" class="slider" id="myRange">
+                            <p class="demo-dollar">&#36; <span id="demo"></span></p>
+                        </div>
+                    </div>
+                    <div class="product-decoration-box">
+                        <div class="rectangle-box">
+                            <div class="rec-box-h6">Sort by</div>
+                            <div class="dropdown">
+                                <button class="btn btn-secondary btn-sm dropdown-toggle button-rec-box" type="button"
+                                    id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false">
+                                    <span class="name">Name</span>
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="#">Price</a>
+                                    <a class="dropdown-item" href="#">Popularity</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rectangle-box">
+                            <div class="rec-box-h6">Show</div>
+                            <div class="dropdown">
+                                <button class="btn btn-secondary btn-sm dropdown-toggle button-rec-box" type="button"
+                                    id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false">
+                                    <span class="name-second">09</span>
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="#">10</a>
+                                    <a class="dropdown-item" href="#">11</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-flex products-flex">
+                        <products :featured="false"></products>
+                    </div>
+                    <div class="box-footer">
+                        <nav class="page-nav" aria-label="Page navigation example">
+                            <ul class="pagination">
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Previous">
+                                        <span aria-hidden="true"><i class="fas fa-angle-left"></i></span>
+                                    </a>
+                                </li>
+                                <li class="page-item "><a class="page-link page-link-current" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                <li class="page-item"><a class="page-link" href="#">6</a></li>
+                                <li class="page-item"><a class="page-link" href="#">...</a></li>
+                                <li class="page-item"><a class="page-link" href="#">20</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Next">
+                                        <span aria-hidden="true"><i class="fas fa-angle-right"></i></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <button class="button_view-all">View All</button>
+                    </div>
+                </section>
+            </div>
+            <div class="product-black-box">
+                <div class="container">
+                    <div class="black-box-delivery">
+                        <article class="black-box">
+                            <img class="icon-truck" src="img/icon-truck.svg" alt="icon">
+                            <h4 class="special-offer-para-h4">Free Delivery</h4>
+                            <div>
+                                <p class="special-offer-para-p">Worldwide delivery on all. Authoritatively morph
+                                    next-generation innovation with extensive models.</p>
+                            </div>
+                        </article>
+                        <article class="black-box">
+                            <img class="icon-truck" src="img/icon-discount.svg" alt="icon">
+                            <h4 class="special-offer-para-h4">Sales &amp; discounts</h4>
+                            <p class="special-offer-para-p">Worldwide delivery on all. Authoritatively morph
+                                next-generation innovation with extensive models.</p>
+                        </article>
+                        <article class="black-box">
+                            <img class="icon-truck" src="img/icon-discount.svg" alt="icon">
+                            <h4 class="special-offer-para-h4">Quality assurance</h4>
+                            <p class="special-offer-para-p">Worldwide delivery on all. Authoritatively morph
+                                next-generation innovation with extensive models.</p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer-elem></footer-elem>
+
+    </div>
+
+    <script>
+        let slider = document.getElementById("myRange");
+        let output = document.getElementById("demo");
+        output.innerHTML = slider.value;
+        slider.oninput = function () {
+            output.innerHTML = this.value;
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/dropoutComp.js"></script>
+    <script src="js/asideComp.js"></script>
+    <script src="js/dropdownMenu.js"></script>
+    <script src="js/footerComp.js"></script>
+    <script src="js/errorComp.js"></script>
+    <script src="js/productsComp.js"></script>
+    <script src="js/cartComp.js"></script>
+    <script src="js/main.js"></script>
+
+    <!-- пока страница грузится, пользователь видит черный экран и крутящийся квадратик -->
+    <div class="loader-wrapper">
+        <span class="loader"><span class="loader-inner"></span></span>
+    </div>
+
+    <script>
+        $(window).on("load", function () {
+            $(".loader-wrapper").fadeOut("slow");
+        });
+    </script>
+
+</body>
+
+</html>
